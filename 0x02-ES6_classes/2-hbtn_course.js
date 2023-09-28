@@ -7,16 +7,14 @@ export default class HolbertonCourse {
     }
 
     if (typeof length === 'number') {
-      this._number = length;
+      this._length = length;
     } else {
       throw new Error('TypeError: Length must be a number');
     }
 
     if (Array.isArray(students)) {
       for (const each of students) {
-        if (typeof each === 'string') {
-          continue;
-        } else {
+        if (!(typeof each === 'string')) {
           throw new Error('TypeError: Students must be a list of strings only');
         }
       }
@@ -36,7 +34,7 @@ export default class HolbertonCourse {
 
   set length(num) {
     if (typeof num === 'number') {
-      this._number = num;
+      this._length = num;
     } else {
       throw new Error('TypeError: Length must be a number');
     }
@@ -45,9 +43,7 @@ export default class HolbertonCourse {
   set students(strList) {
     if (Array.isArray(strList)) {
       for (const each of strList) {
-        if (typeof each === 'string') {
-          continue;
-        } else {
+        if (!(typeof each === 'string')) {
           throw new Error('TypeError: Students must be a list of strings only');
         }
       }
