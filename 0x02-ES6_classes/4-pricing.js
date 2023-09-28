@@ -22,8 +22,8 @@ export default class Pricing {
     return this._currency;
   }
 
-  displayFullPrice(amount, curInst) {
-    return `${amount} ${curInst.name} (${curInst.code})`;
+  displayFullPrice() {
+    return `${this._amount} ${this._currency.name} (${this._currency.code})`;
   }
 
   static convertPrice(amount, conversionRate) {
