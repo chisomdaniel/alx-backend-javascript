@@ -25,4 +25,8 @@ export default class Pricing {
     displayFullPrice(amount, curInst) {
         return `${amount} ${curInst.name} (${curInst.code})`
     }
+
+    static convertPrice(amount, conversionRate) {
+        return amount * conversionRate
+    }
 }
