@@ -3,26 +3,26 @@ export default class HolbertonCourse {
     if (typeof name === 'string') {
       this._name = name;
     } else {
-      throw 'TypeError: Name must be a string';
+      throw new Error('TypeError: Name must be a string');
     }
 
     if (typeof length === 'number') {
       this._number = length;
     } else {
-      throw 'TypeError: Length must be a number';
+      throw new Error('TypeError: Length must be a number');
     }
 
     if (Array.isArray(students)) {
-      for (let each of students) {
+      for (const each of students) {
         if (typeof each === 'string') {
           continue;
         } else {
-          throw 'TypeError: Students must be a list of strings only';
+          throw new Error('TypeError: Students must be a list of strings only');
         }
       }
       this._students = students;
     } else {
-      throw 'TypeError: Students must be a list';
+      throw new Error('TypeError: Students must be a list');
     }
   }
 
@@ -30,7 +30,7 @@ export default class HolbertonCourse {
     if (typeof n === 'string') {
       this._name = n;
     } else {
-      throw 'TypeError: Name must be a string';
+      throw new Error('TypeError: Name must be a string');
     }
   }
 
@@ -38,22 +38,22 @@ export default class HolbertonCourse {
     if (typeof num === 'number') {
       this._number = num;
     } else {
-      throw 'TypeError: Length must be a number';
+      throw new Error('TypeError: Length must be a number');
     }
   }
 
   set students(strList) {
     if (Array.isArray(strList)) {
-      for (let each of strList) {
+      for (const each of strList) {
         if (typeof each === 'string') {
           continue;
         } else {
-          throw 'TypeError: Students must be a list of strings only';
+          throw new Error('TypeError: Students must be a list of strings only');
         }
       }
       this._students = strList;
     } else {
-      throw 'TypeError: Students must be a list';
+      throw new Error('TypeError: Students must be a list');
     }
   }
 
