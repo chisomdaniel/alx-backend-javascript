@@ -1,9 +1,8 @@
-export default function getStudentByLocation (objList, city) {
-    newList = objList.filter((obj)=>{
-        if (obj.city === city) {
-            return True;
-        } else {
-            return False;
-        }
-    })
+export default function getStudentByLocation(objList, city) {
+  objList.filter((obj) => {
+    if (obj.city === city) {
+      return true;
+    }
+    return false;
+  });
 }
