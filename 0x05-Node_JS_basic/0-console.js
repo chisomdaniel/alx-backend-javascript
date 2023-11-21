@@ -1,5 +1,5 @@
 function displayMessage(input) {
-  console.log(`${input}\n`);
+  console.log(`${input}`);
 }
 
 module.exports = displayMessage;
