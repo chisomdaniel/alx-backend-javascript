@@ -49,17 +49,17 @@ describe('add numbers', function () {
     })
     describe('SUBTRACT', function () {
         it('should return 4', function () {
-            assert.equal(calculateNumber('SUBTRACT', 1, 5), 4);
+            assert.equal(calculateNumber('SUBTRACT', 5, 1), 4);
         })
     })
     describe('Subtract with negative value', function () {
         it('should return 10', function () {
-            assert.equal(calculateNumber('SUBTRACT', -1, 9), 10);
+            assert.equal(calculateNumber('SUBTRACT', 9, -1), 10);
         })
     })
     describe('subtract', function () {
         it('should return 3', function () {
-            assert.equal(calculateNumber('SUBTRACT', 0, 32), 32);
+            assert.equal(calculateNumber('SUBTRACT', 32, 0), 32);
         })
     })
     describe('subtract', function () {

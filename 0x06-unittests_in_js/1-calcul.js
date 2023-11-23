@@ -6,7 +6,7 @@ function calculateNumber(type, a, b) {
         return a+b
     }
     if (type == 'SUBTRACT') {
-        return b-a
+        return a-b
     }
     if (type == 'DIVIDE') {
         if (b == 0) {
