@@ -2,7 +2,6 @@ const chai = require('chai');
 const expect = chai.expect;
 const calculateNumber = require('./1-calcul');
 
-
 describe('add numbers', function () {
     describe('correct output', function () {
         it('should return 3', function () {
