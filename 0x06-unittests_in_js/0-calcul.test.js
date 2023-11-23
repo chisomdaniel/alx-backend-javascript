@@ -29,10 +29,3 @@ it('should return 0', function () {
     assert.equal(calculateNumber(0, 0), 0);
 })
 
-it('should return NaN', function () {
-    assert.equal(calculateNumber(1, 'a'), NaN);
-})
-it('should return NaN', function () {
-    assert.equal(calculateNumber('b', 'a'), NaN);
-})
-
