@@ -4,10 +4,10 @@ const expect = chai.expect;
 
 describe('dealing with async and promises', function() {
     it('should get a promise', function (done) {
-        getPaymentTokenFromAPI(true).then(function (out) {
-            expect(out).to.equal({data: 'Successful response from the API' })
+        getPaymentTokenFromAPI(true).then( ({data})=> {
+            expect(data).to.equal('Successful response from the API')
+            done()
         })
-        done()
     })
     it('no output', function(){
         expect(getPaymentTokenFromAPI()).to.be.an('undefined')
