@@ -11,6 +11,7 @@ describe('sendPaymentRequestToApi:', function () {
             sinon.spy(Utils, 'calculateNumber')
             sendPaymentRequestToApi(100, 20)
             expect(Utils.calculateNumber.calledOnce).to.be.true;
+            Utils.calculateNumber.restore();
         })
     })
 })
