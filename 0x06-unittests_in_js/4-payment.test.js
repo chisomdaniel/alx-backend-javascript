@@ -23,6 +23,7 @@ describe('sendPaymentRequestToApi:', function () {
         })
         it('prints the right output', function () {
             expect(console.log.calledWith('The total is: 10')).to.be.true
+            console.log.restore();
         })
     })
 })
