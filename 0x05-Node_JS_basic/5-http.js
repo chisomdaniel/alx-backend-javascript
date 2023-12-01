@@ -1,6 +1,15 @@
-const app = require('http');
+const http = require('http');
 
-app.createServer((req, res) => {
-  res.write('Hello Holberton School!');
-  res.end();
-}).listen(1245);
+const app = http.createServer((req, res) => {
+  if (req.url === '/') {
+    res.write('Hello Holberton School!');
+    res.end();
+  } else if (req.url === '/students') {
+    res.write('This is the list of our students');
+    res.write();
+  }
+});
+
+app.listen(1245);
+
+module.exports = app;
